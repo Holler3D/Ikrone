@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome link -->
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="logo.webp" alt="Logo" class="logo">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">View Balance</a></li>
+                <li><a href="#">Testimonies</a></li>
+                <li><a href="#">Withdraw to Wallet</a></li>
+                <li><a href="#">Play Games</a></li>
+                <li><a href="#">Deposit</a></li>
+            </ul>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-medium-m"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="dashboard-container">
+                <h1>Coming Soon!!!</h1>
+
+                <!-- Tapping Bot Game Section -->
+                <div class="tapping-game">
+                    <h2>Tap the Bot to Increase Your Balance</h2>
+                    <img src="bot.png" alt="Tapping Bot" id="tapping-bot" class="tapping-bot">
+                    <p>Taps: <span id="tap-count">0</span></p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-content">
+                        <h2>Current Balance</h2>
+                        <p class="amount" id="current-balance">$5,230.50</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

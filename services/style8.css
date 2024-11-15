@@ -1,0 +1,116 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0a0f29, #0d1a48);
+    color: #f1f1f1;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: rgba(15, 20, 60, 0.95);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00ffcc;
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.7);
+}
+
+.navbar a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00ffcc;
+}
+
+/* Services Section */
+.services-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #121826;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00ffcc;
+}
+
+.services-section p {
+    font-size: 1.1em;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Service Card */
+.service-card {
+    background-color: #1f2739;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #f1f1f1;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00ffcc;
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.7);
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+    background: rgba(15, 20, 60, 0.95);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    color: #f1f1f1;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}

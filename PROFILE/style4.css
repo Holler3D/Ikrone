@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5d5d86;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.profile-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2, h3 {
+    margin: 0 0 10px;
+}
+.user-details, .transactions, .deposits-withdrawals {
+    margin-bottom: 20px;
+}
+.user-details #user-info p, #total-earnings {
+    margin: 5px 0;
+}
+.transactions, .deposits-withdrawals {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+#transaction-list, #deposit-list, #withdrawal-list {
+    list-style: none;
+    padding: 0;
+}
+.transaction-item, .deposit-item, .withdrawal-item {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
