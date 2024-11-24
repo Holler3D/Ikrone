@@ -5,16 +5,18 @@
     box-sizing: border-box;
 }
 
-/* Body and Base Styles */
+/* Body and Background */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
 }
 
+/* Header Section */
 .main {
-    background-color: #333;
-    color: white;
+    background: rgba(0, 0, 0, 0.7);
     padding: 1em 0;
 }
 
@@ -28,11 +30,10 @@ body {
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
 }
 
-/* Menu Styles */
 .menu {
     display: flex;
     list-style: none;
@@ -51,44 +52,89 @@ body {
     border-radius: 5px;
 }
 
-/* Responsive Toggle Button */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5em;
-    cursor: pointer;
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5em 1em;
 }
 
-/* Responsive Menu for Smaller Screens */
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
 
-    .menu.active {
-        display: flex;
-    }
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
 
-    .menu li {
-        margin: 10px 0;
-    }
+.cta {
+    display: inline-block;
+    background-color: #ff9800;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-    .menu li a {
-        color: white;
-    }
+.cta:hover {
+    background-color: #e68900;
+}
 
-    .menu-toggle {
-        display: block;
-    }
+/* About Section */
+.about {
+    text-align: center;
+    padding: 3em 1em;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+    padding: 3em 1em;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5em;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+}
+
+.feature h3 {
+    margin-bottom: 0.5em;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.9);
 }
