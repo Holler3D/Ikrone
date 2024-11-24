@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I.KRONE</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,9 +11,10 @@
         <div class="nav">
             <nav class="icon">
                 <h2 class="logo">I.KRONE</h2>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
             </nav>
         </div>
-        <div class="menu">
+        <div class="menu" id="menu">
             <ul>
                 <li><a href="signup/signup.html">LOGIN</a></li>
                 <li><a href="about us/about.html">ABOUT US</a></li>
@@ -20,5 +23,15 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        // Menu toggle for mobile responsiveness
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
