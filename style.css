@@ -1,87 +1,90 @@
-/* Base styles for the body and navigation */
-body {
+/* General Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Base Styles */
+body {
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
 }
 
 .nav {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 1em;
+    padding: 0 1em;
 }
 
 .logo {
-    margin: 0;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
-/* Menu styles */
+/* Menu Styles */
 .menu {
     display: flex;
-    justify-content: center;
     list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu ul {
-    display: flex;
     gap: 20px;
 }
 
-.menu ul li a {
+.menu li a {
     text-decoration: none;
-    color: #333;
+    color: white;
     padding: 10px 15px;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.menu ul li a:hover {
-    background-color: #ddd;
+.menu li a:hover {
+    background-color: #555;
     border-radius: 5px;
 }
 
-/* Responsive Design */
+/* Responsive Toggle Button */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
-    font-size: 1.5em;
     color: white;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
-/* Mobile Menu */
+/* Responsive Menu for Smaller Screens */
 @media (max-width: 768px) {
     .menu {
         display: none;
         flex-direction: column;
+        gap: 10px;
         background-color: #333;
         position: absolute;
         top: 60px;
         right: 0;
         width: 100%;
         text-align: center;
+        padding: 10px 0;
     }
 
     .menu.active {
         display: flex;
     }
 
-    .menu ul {
-        flex-direction: column;
-        gap: 10px;
+    .menu li {
+        margin: 10px 0;
     }
 
-    .menu ul li a {
+    .menu li a {
         color: white;
     }
 
