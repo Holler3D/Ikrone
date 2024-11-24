@@ -1,75 +1,91 @@
-*{
+/* Base styles for the body and navigation */
+body {
     margin: 0;
-    padding: 0;
-
+    font-family: Arial, sans-serif;
 }
 
-.main{
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(background.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 109vh;
+.main {
+    display: flex;
+    flex-direction: column;
 }
 
-.navbar{
-    width: 1200px;
-    height: 75px;
-    margin: auto;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1em;
 }
 
-.icon{
-    width: 200px;
-    float: left;
-    height: 70px;
-
+.logo {
+    margin: 0;
+    font-size: 1.5em;
 }
 
-.logo{
-    color: rgb(157, 239, 244);
-    font-size: 30px;
-    font-family: arial;
-    padding-left: 15px;
-    float: left;
-    padding-top: 20px;
-}
-.menu{
-    width: 400px;
-    float: left;
-    height: 75px;
-}
-
-ul{
-    float: left;
+/* Menu styles */
+.menu {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-ul li{
     list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
-    font-size: 14px;
+    margin: 0;
+    padding: 0;
 }
-ul li a{
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
     text-decoration: none;
-    color: aliceblue;
-    font-family: arial;
-    font-weight: bold;
-    transition: 0.4s ease-in-out;
+    color: #333;
+    padding: 10px 15px;
+    transition: background 0.3s;
 }
 
-ul li a:hover{
-    color: #101214;
+.menu ul li a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
 }
 
-.content{
-    font-size: 25px;
-    text-align: center;
-    margin-left: 250px;
-    margin-bottom: 0%;
-    margin-top: auto;
-    margin-right: 250px;
-    color: #d3124f;
-    font-family: arial;
+/* Responsive Design */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu ul li a {
+        color: white;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
