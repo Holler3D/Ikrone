@@ -7,25 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main">
-        <div class="nav">
-            <nav class="icon">
-                <h2 class="logo">I.KRONE</h2>
-                <button class="menu-toggle" id="menu-toggle">☰</button>
-            </nav>
-        </div>
-        <div class="menu" id="menu">
-            <ul>
+    <header class="main">
+        <nav class="nav">
+            <h2 class="logo">I.KRONE</h2>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <ul class="menu" id="menu">
                 <li><a href="signup/signup.html">LOGIN</a></li>
                 <li><a href="about us/about.html">ABOUT US</a></li>
                 <li><a href="contact us/contact.html">CONTACT</a></li>
                 <li><a href="services/services.html">SERVICE</a></li>
             </ul>
-        </div>
-    </div>
+        </nav>
+    </header>
 
     <script>
-        // Menu toggle for mobile responsiveness
+        // JavaScript for responsive menu toggle
         const toggle = document.getElementById('menu-toggle');
         const menu = document.getElementById('menu');
 
