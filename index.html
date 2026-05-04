@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .card {
@@ -52,42 +52,32 @@
   }
 
   .activity {
-    display: flex;
-    align-items: center;
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 8px;
+    background: #f8f9fa;
     transition: 0.3s;
-    cursor: pointer;
   }
 
   .activity:hover {
-    background: #f5f6fa;
+    background: #eef1f5;
   }
 
-  .icon {
-    font-size: 18px;
-    margin-right: 10px;
-  }
-
-  .filters {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-
-  .filters button {
-    flex: 1;
-    margin: 2px;
-    padding: 5px;
-    border: none;
-    border-radius: 8px;
+  .clickable {
+    color: #0984e3;
     cursor: pointer;
-    background: #dfe6e9;
+    font-weight: bold;
   }
 
-  .filters button.active {
-    background: #0984e3;
-    color: white;
+  #gallery {
+    display: none;
+    margin-top: 10px;
+  }
+
+  #gallery img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
 
   @keyframes fadeIn {
@@ -100,50 +90,54 @@
 <body>
 
 <div class="card">
+
   <div class="profile">
+    <!-- Replace 'david.jpg' with your actual image filename -->
     <img src="IMG-20260430-WA0017.jpg" alt="David Pay">
     <h2>David Pay</h2>
     <p>User Activity Overview</p>
   </div>
 
-  <div class="filters">
-    <button onclick="filterActivities('all')" class="active">All</button>
-    <button onclick="filterActivities('call')">Calls</button>
-    <button onclick="filterActivities('message')">Messages</button>
-    <button onclick="filterActivities('view')">Views</button>
+  <div class="activities">
+
+    <div class="activity">
+      📞 <strong>David Pay contacted Bellway Homes</strong>
+    </div>
+
+    <div class="activity">
+      📍 Address: Water Lane, Angmering, West Sussex, BN16 4EJ
+    </div>
+
+    <div class="activity clickable" onclick="toggleGallery()">
+      🖼️ Click to view images (13)
+    </div>
+
+    <div id="gallery">
+      <!-- Add your 13 images here -->
+      <img src="IMG-20260503-WA0015.jpg" alt="">
+      <img src="IMG-20260503-WA0013.jpg" alt="">
+      <img src="IMG-20260503-WA0004.jpg" alt="">
+      <img src="IMG-20260503-WA0014.jpg" alt="">
+      <img src="IMG-20260503-WA0011.jpg" alt="">
+      <img src="IMG-20260503-WA0006.jpg" alt="">
+      <img src="IMG-20260503-WA0008.jpg" alt="">
+      <img src="IMG-20260503-WA0007.jpg" alt="">
+      <img src="IMG-20260503-WA0012.jpg" alt="">
+      <img src="IMG-20260503-WA0010.jpg" alt="">
+      <img src="IMG-20260503-WA0009.jpg" alt="">
+      <img src="IMG-20260503-WA0005.jpg" alt="">
+      <img src=".jpg" alt="">
+      <!-- continue up to img13.jpg -->
+    </div>
+
   </div>
 
-  <div class="activities" id="activityList">
-
-    <div class="activity call">📞 Contacted Shelley Cook (10 mins)</div>
-    <div class="activity view">👁️ Viewed loopsi410</div>
-    <div class="activity call">📞 Contacted Simon Cook (2 mins)</div>
-    <div class="activity call">📞 Received a call</div>
-    <div class="activity message">✉️ Replied to mails</div>
-    <div class="activity message">📱 Conversation with Alan Cook</div>
-    <div class="activity view">👁️ Viewed loopsi410</div>
-    <div class="activity call">📞 Contacted Carol Pay</div>
-    <div class="activity call">🏠 Contacted Bellway Homes</div>
-    <div class="activity message">✉️ Read mails from Lucy Tregear</div>
-
-  </div>
 </div>
 
 <script>
-function filterActivities(type) {
-  const activities = document.querySelectorAll('.activity');
-  const buttons = document.querySelectorAll('.filters button');
-
-  buttons.forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
-
-  activities.forEach(activity => {
-    if (type === 'all') {
-      activity.style.display = 'flex';
-    } else {
-      activity.style.display = activity.classList.contains(type) ? 'flex' : 'none';
-    }
-  });
+function toggleGallery() {
+  const gallery = document.getElementById("gallery");
+  gallery.style.display = gallery.style.display === "none" ? "block" : "none";
 }
 </script>
 
