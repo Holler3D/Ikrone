@@ -36,6 +36,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
+    border: 4px solid #f1f1f1;
   }
 
   .profile h2 {
@@ -47,31 +48,36 @@
     font-size: 14px;
   }
 
-  .locations {
+  .activities {
     margin-top: 20px;
   }
 
-  .location {
+  .activity {
     background: #f8f9fa;
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
   }
 
-  .location strong {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  .location img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 8px;
+  .activity:hover {
+    background: #eef1f4;
+    transform: translateY(-2px);
   }
 
   @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(10px);}
-    to {opacity: 1; transform: translateY(0);}
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
 </head>
@@ -84,24 +90,41 @@
     <!-- Replace with your actual image -->
     <img src="IMG-20260430-WA0017.jpg" alt="David Pay">
     <h2>David Pay</h2>
-    <p>Recent Locations</p>
+    <p>Recent Activities</p>
   </div>
 
-  <div class="locations">
+  <div class="activities">
 
-    <div class="location">
-      <strong>Visited - Stars Sweet and Curry, Slough UK</strong>
-      <img src="Screenshot_20260505_131943_Maps.jpg" alt="Stars Sweet and Curry">
+    <div class="activity">
+      ☎️ Contacted Shelley Cook
     </div>
 
-    <div class="location">
-      <strong>Seen - along Canterbury Avenue, Slough UK</strong>
-      <img src="Screenshot_20260505_132140_Maps.jpg" alt="Canterbury Avenue">
+    <div class="activity">
+      👁️ Viewed loopsi410
     </div>
 
-    <div class="location">
-      <strong>Visited - Musclehut, Herne Bay</strong>
-      <img src="Screenshot_20260505_132339_Maps.jpg" alt="Musclehut Herne Bay">
+    <div class="activity">
+      🌍 Visited Amsterdam, Netherlands
+    </div>
+
+    <div class="activity">
+      🏨 Contacted Meininger Hotel Amsterdam
+    </div>
+
+    <div class="activity">
+      👁️ Viewed loopsi410
+    </div>
+
+    <div class="activity">
+      📍 GPS-seen at Slough, UK
+    </div>
+
+    <div class="activity">
+      ☎️ Contacted Shelley Cook
+    </div>
+
+    <div class="activity">
+      💬 Viewed messages from Lucy Tregear
     </div>
 
   </div>
